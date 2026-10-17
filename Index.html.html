@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAEyklEQVR42u2dS3LjMAxEHZZv4/3kLpPK6VI5jA+Q6ySz8JQXjj+SRRJA9+t1IovAY5MUJfDl5++fHULX1AgBAg4EHAg4EHAg4EDAgYADAQcCDgQcCAEHAg60XXvr1n8eF/3Z26tneF7stuwXAgEoRnBsZMKSEnU4ujPhRIkuHEuwWJjXjpcCjtRYbMzi0IsDRwwZ3dM27YeAo2q2pBFRgeNqkqZlKPbXgWNdbkISk+Q2gCNpl9WykMpwpO2pKhbSIKO/ft/JhGdxwFGma0rwIbFln9O0669WCsJx0QUz5+Di3qqZR7UJ6SAyhq4yCtFcGI4RUX7Ym0f8ShE+ys45tsf387jI5xf+meL8ow4cfQfstVeL/XXgmGfLz+Wm7/uFFfgoOKyEkDGCD+DwMWG9dlVzjkDb8DOPRveidRLOEW4bZubB55CoLhznfqb0YvepLW+vyRu1LxNKMVVoFMMKAg4EHAg4Qod5myoMOAcCjl6d3ql4C86BgKNL1zcrDmbpHM/l2K9snOuwsjbTlgUFX9wPAJzz9jlwqCFijAVwoAfauweAYQXnWM0ElJiuVkK+W8E5NLFwtZAGGViIPRyWH7sCR1wu1RExmHOMTqHuFKRBBv7BhBQBR0ifFjWPBhnwYQZHSKrk+GiQAR9MSBFwhPddIfNokAEfBnCkSokEHw0y4IMJKfKEI7aP3tl4K24eTZmMafulonw0yIAPRTgKBZ0DABMp5AUcubd+hI4OzZAkrcGlQQZ8aMFxKwFJjD357S1W2W9lT4Gu0hc54y046KkSkPbGvFYr5yLz3BhwVDLt4otbNt4QcCDgmG3s0uUYcA4EHAg4pjq/eokfD+cYkUWD4k8MKwg4+nZ0j5pxHOMFGcDRJbWctyKr0/7+5/H581bOVwAOcUoWnhZ+/jMqGIsD8dww4XrghvepCWcLWYUFcw5921hiAN7cNGsy0l4ZOGosa40P46GCMeaBc2yxBFfzcK1g3PFcWWqfM6AYDi4cVz74v4DD2jZ0zYNdWczDCo6hBRqcZqaUt2ZwYVjZ8SaYORwZOi6F8X1tw8k8PArjT/5uRcU89mreEJ4YIVORG1Z+52bm55Baw43ia4IhFqI4C9GdkM4pyVW/8Ncd2bx9jnAOBBwIOBBwIJayExXyKExuzVJttSLwZLoOQynhsP1CNRk3CeDoisLhPbg1Xx86uATBsRKI8JSnwGg6KBPheASEJAGjuJkCynA4Du14tamgsB2Xw/vu6/u1HhyHdvzdJIAYAcopqiMo6Q/HCYuLNoDFUETO4e2LSBtEBoYxWlejejX+8XAc2vHWnXVe3aG7Ub2TiGDnuIX21weI9MRizpA9dm/l/1zpY8csZNBqZahmbLxdIHKrteCyfCCeE6t5u7IXo8yqiPCENCQInZeyT0yF+s5FxPZWnmhOx9XswOccSeJbfXUaRcZu9BPS5P2yKAETsBgLx2hKEjIUMqKV3FtJQonscuZ7xq7sPqQ9gJIWiBg47rQTVpLQkAKOh1EwxCUchaRwrIpUaW4SElAPju3xncxQrazLwuGcrcnic0gEHAg4EHAg4EDAgYADAQcCDgQcCDgQAg4EHAg4EHAg4EDAgYADAQcCDgQcCAEHAg4EHAg4EHCgHPoH94/FFFsq6MIAAAAASUVORK5CYII=">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAEyklEQVR42u2dS3LjMAxEHZZv4/3kLpPK6VI5jA+Q6ySz8JQXjj+SRRJA9+t1IovAY5MUJfDl5++fHULX1AgBAg4EHAg4EHAg4EDAgYADAQcCDgQcCAEHAg60XXvr1n8eF/3Z26tneF7stuwXAgEoRnBsZMKSEnU4ujPhRIkuHEuwWJjXjpcCjtRYbMzi0IsDRwwZ3dM27YeAo2q2pBFRgeNqkqZlKPbXgWNdbkISk+Q2gCNpl9WykMpwpO2pKhbSIKO/ft/JhGdxwFGma0rwIbFln9O0669WCsJx0QUz5+Di3qqZR7UJ6SAyhq4yCtFcGI4RUX7Ym0f8ShE+ys45tsf387jI5xf+meL8ow4cfQfstVeL/XXgmGfLz+Wm7/uFFfgoOKyEkDGCD+DwMWG9dlVzjkDb8DOPRveidRLOEW4bZubB55CoLhznfqb0YvepLW+vyRu1LxNKMVVoFMMKAg4EHAg4Qod5myoMOAcCjl6d3ql4C86BgKNL1zcrDmbpHM/l2K9snOuwsjbTlgUFX9wPAJzz9jlwqCFijAVwoAfauweAYQXnWM0ElJiuVkK+W8E5NLFwtZAGGViIPRyWH7sCR1wu1RExmHOMTqHuFKRBBv7BhBQBR0ifFjWPBhnwYQZHSKrk+GiQAR9MSBFwhPddIfNokAEfBnCkSokEHw0y4IMJKfKEI7aP3tl4K24eTZmMafulonw0yIAPRTgKBZ0DABMp5AUcubd+hI4OzZAkrcGlQQZ8aMFxKwFJjD357S1W2W9lT4Gu0hc54y046KkSkPbGvFYr5yLz3BhwVDLt4otbNt4QcCDgmG3s0uUYcA4EHAg4pjq/eokfD+cYkUWD4k8MKwg4+nZ0j5pxHOMFGcDRJbWctyKr0/7+5/H581bOVwAOcUoWnhZ+/jMqGIsD8dww4XrghvepCWcLWYUFcw5921hiAN7cNGsy0l4ZOGosa40P46GCMeaBc2yxBFfzcK1g3PFcWWqfM6AYDi4cVz74v4DD2jZ0zYNdWczDCo6hBRqcZqaUt2ZwYVjZ8SaYORwZOi6F8X1tw8k8PArjT/5uRcU89mreEJ4YIVORG1Z+52bm55Baw43ia4IhFqI4C9GdkM4pyVW/8Ncd2bx9jnAOBBwIOBBwIJayExXyKExuzVJttSLwZLoOQynhsP1CNRk3CeDoisLhPbg1Xx86uATBsRKI8JSnwGg6KBPheASEJAGjuJkCynA4Du14tamgsB2Xw/vu6/u1HhyHdvzdJIAYAcopqiMo6Q/HCYuLNoDFUETO4e2LSBtEBoYxWlejejX+8XAc2vHWnXVe3aG7Ub2TiGDnuIX21weI9MRizpA9dm/l/1zpY8csZNBqZahmbLxdIHKrteCyfCCeE6t5u7IXo8yqiPCENCQInZeyT0yF+s5FxPZWnmhOx9XswOccSeJbfXUaRcZu9BPS5P2yKAETsBgLx2hKEjIUMqKV3FtJQonscuZ7xq7sPqQ9gJIWiBg47rQTVpLQkAKOh1EwxCUchaRwrIpUaW4SElAPju3xncxQrazLwuGcrcnic0gEHAg4EHAg4EDAgYADAQcCDgQcCDgQAg4EHAg4EHAg4EDAgYADAQcCDgQcCAEHAg4EHAg4EHCgHPoH94/FFFsq6MIAAAAASUVORK5CYII=">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trampoliinitemppu-arpoja</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&display=swap">
+<style>
+:root{--bg:#f4f1ea;--card:#fff;--ink:#1d1b26;--mut:#6b6877;--acc:#ff5a36;--acc2:#2a5cff;--ok:#1f9d55;--line:#e2ddd0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14131a;--card:#1f1d29;--ink:#f3f1fa;--mut:#9b97ad;--acc:#ff7451;--acc2:#6d90ff;--ok:#3ccf7e;--line:#322f42}}
+:root[data-theme="dark"]{--bg:#14131a;--card:#1f1d29;--ink:#f3f1fa;--mut:#9b97ad;--acc:#ff7451;--acc2:#6d90ff;--ok:#3ccf7e;--line:#322f42}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh}
+main{max-width:480px;margin:0 auto;padding:16px}
+h1{font-size:22px;margin:4px 0 12px;display:flex;gap:8px;align-items:center}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:0;padding:8px;text-align:center}
+.stat b{display:block;font-size:22px}
+.stat span{font-size:12px;color:var(--mut)}
+.row{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 12px;border-radius:0;font-size:14px;cursor:pointer}
+.chip.on{background:var(--acc2);border-color:var(--acc2);color:#fff}
+.card{background:var(--card);border:1px solid var(--line);border-radius:0;padding:16px;margin:12px 0;animation:pop .35s ease}
+@keyframes pop{from{transform:scale(.92) rotate(-2deg);opacity:0}to{transform:none;opacity:1}}
+.card .top{display:flex;justify-content:space-between;font-size:13px;color:var(--mut)}
+.card h2{margin:6px 0;font-size:28px}
+.card p{margin:0;color:var(--mut);line-height:1.4}
+.step{font-size:12px;font-weight:700;color:var(--acc)}
+.big{width:100%;padding:16px;font-size:18px;font-weight:700;border:0;border-radius:0;background:var(--acc);color:#fff;cursor:pointer}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.two button{padding:14px;border-radius:0;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:16px;cursor:pointer}
+.two .y{background:var(--ok);color:#fff;border-color:var(--ok)}
+.hint{text-align:center;color:var(--mut);padding:30px 10px}
+.safe{font-size:12px;color:var(--mut);margin-top:14px;line-height:1.4}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
+.three button{padding:12px 4px;border-radius:0;border:0;color:#fff;font-size:14px;font-weight:700;cursor:pointer}
+.three small{font-weight:400;opacity:.9}
+.three .y{background:var(--ok)}.three .s{background:#d98a00}.three .f{background:#d33a3a}
+.cn{text-align:center;color:var(--mut);font-size:14px;margin:-4px 0 10px}
+.card h2{text-transform:none}
+h1,.card h2,.shh b,.stat b,.lr .rk,.lr>b{font-family:"Emerald Serif",Emerald,Fraunces,Georgia,"Times New Roman",serif}
+.card h2{font-weight:800;line-height:1.15}
+.add{display:flex;gap:6px;margin-bottom:12px}
+.add input{flex:1;min-width:0;padding:10px 12px;border-radius:0;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:16px}
+.lh{margin:22px 0 2px;font-size:18px}.lbn{font-size:12px;color:var(--mut);margin-bottom:8px}
+.lr{display:flex;gap:8px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:0;padding:10px 12px;margin-bottom:6px}
+.lr.me{border-color:var(--acc2)}.lr.cur{background:color-mix(in srgb,var(--acc2) 14%,var(--card))}
+.lr .rk{width:30px;font-weight:700}.lr .nn{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.lr small{color:var(--mut)}
+[hidden]{display:none!important}
+header{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.gear{border:1px solid var(--line);background:var(--card);border-radius:0;width:42px;height:42px;font-size:20px;cursor:pointer;flex:none}
+.bd{position:fixed;inset:0;background:rgba(0,0,0,.4);opacity:0;pointer-events:none;transition:opacity .25s;z-index:20}
+.bd.on{opacity:1;pointer-events:auto}
+.sh{position:fixed;left:0;right:0;bottom:0;height:50vh;height:50dvh;max-width:480px;margin:0 auto;background:var(--bg);border-radius:0;border:1px solid var(--line);padding:14px 16px calc(16px + env(safe-area-inset-bottom,0px));overflow-y:auto;transform:translateY(105%);transition:transform .28s ease;z-index:21}
+.sh.on{transform:none}
+.shh{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:12px}
+.shh b{flex:1;text-align:center;font-size:17px}
+.mi{display:flex;justify-content:space-between;width:100%;padding:14px;border-radius:0;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:16px;cursor:pointer}
+.fcp{font-size:56px;font-weight:800;text-align:center;margin:6px 0;font-family:"Emerald Serif",Emerald,Fraunces,Georgia,serif}
+.fct{color:var(--mut);line-height:1.4;text-align:center;margin:8px 0 12px}
+.bar{height:8px;border-radius:0;background:var(--line);overflow:hidden;margin-bottom:6px}.bar div{height:100%;background:var(--acc)}
+#fcv .lbn{text-align:center}
+#flv .nn{white-space:normal}#flv .lbn{text-align:center}
+.x{color:var(--acc2);font-weight:800}
+.dy{border:2px solid var(--acc2);background:var(--card);padding:14px;margin-bottom:12px}
+.dy .top{display:flex;justify-content:space-between;gap:8px;font-size:13px;color:var(--mut)}
+.dy .step{color:var(--acc2)}
+.dy h2{margin:6px 0 10px;font-size:24px;line-height:1.15;font-weight:800;font-family:"Emerald Serif",Emerald,Fraunces,Georgia,serif}
+.dy .fct{margin:0;text-align:left}
+.xp{font-size:13px;color:var(--mut);margin:0 0 10px;line-height:1.5}.xp .x3{color:var(--acc2);font-weight:700}.dy .row{margin-bottom:10px}
+.chip:disabled{opacity:.45;cursor:not-allowed}.dy .fct{margin:0 0 8px}
+</style>
+</head>
+<body>
+<main>
+<header><h1>🤸 Trampoliinitemppu-arpoja</h1><button class="gear" id="gear" aria-label="Asetukset">⚙️</button></header>
+<div class="row" id="pl"></div>
+<div class="add"><input id="nm" maxlength="20" placeholder="Uuden pelaajan nimi"><button class="chip on" id="addp">+ Lisää pelaaja</button></div>
+<div class="stats">
+<div class="stat"><b id="sc">0</b><span>Pisteet</span></div>
+<div class="stat"><b id="st">0</b><span>Putki</span></div>
+<div class="stat"><b id="bs">0</b><span>Paras putki</span></div>
+</div>
+<div class="cn" id="cn"></div>
+<div class="row" id="lv"></div>
+<div class="row" id="md"></div>
+<button class="big" id="spin">🎲 Arvo temppu</button>
+<div id="out"><div class="hint">Paina nappia ja saat tempun. Tee se ja kirjaa pisteet!</div></div>
+<p class="safe">Tämä on pelkkä arpoja. Kokeile vain temppuja, jotka hallitset, ja mielellään turvalaitteiden ja valmentajan kanssa.</p>
+</main>
+<div class="bd" id="bd"></div>
+<div class="sh" id="sh" role="dialog" aria-label="Asetukset">
+<div class="shh"><button class="chip" id="bk" hidden>‹ Takaisin</button><b id="sht">Asetukset</b><button class="chip" id="cl" aria-label="Sulje">✕</button></div>
+<div id="mn"><button class="mi" id="golb"><span>🏆 Leaderboard</span><span>›</span></button>
+<button class="mi" id="gofc" style="margin-top:8px"><span>🎯 Flip course</span><span>›</span></button>
+<button class="mi" id="gofl" style="margin-top:8px"><span>📋 Epäonnistuneet temput</span><span>›</span></button>
+<button class="mi" id="gody" style="margin-top:8px"><span>⭐ Päivän temppu</span><span>›</span></button></div>
+<div id="lbv" hidden><div class="lbn" id="lbn"></div><div id="lb"></div></div>
+<div id="fcv" hidden></div>
+<div id="flv" hidden></div>
+<div id="dy" hidden></div>
+</div>
+<script>
+const T=[
+{n:"112 kaboom landed",l:1,p:30},{n:"22 cody",l:1,p:30},{n:"triple kaboom",l:1,p:35},{n:"cody full to 12 kaboom",c:1,l:1,p:40},{n:"kaboom full in landed",l:1,p:40},{n:"double backflip to 22 kaboom",c:1,l:1,p:45},
+{n:"3123 kaboom",l:2,p:70},{n:"triple backflip to double cody",c:1,l:2,p:75},{n:"33 kaboom",l:2,p:80},{n:"triple cody",l:2,p:85},{n:"kaboom full in dub",l:2,p:90},{n:"standing triple kaboom",l:2,p:95},{n:"1 bounce triple kaboom to double cody",c:1,l:2,p:100},
+{n:"standing double cody",l:2,p:75},{n:"123 kaboom",l:2,p:80},{n:"triple backflip",l:2,p:85},{n:"kaboom full out",l:2,p:85},{n:"double kaboom full in",l:2,p:90},
+{n:"double cody to 22 kaboom",c:1,l:2,p:95},{n:"kaboom full in to double cody",c:1,l:2,p:100},{n:"full in to triple kaboom",c:1,l:2,p:105},{n:"standing double cody to triple kaboom",c:1,l:2,p:110},{n:"1 bounce double cody to triple kaboom",c:1,l:2,p:110},{n:"triple backflip to 33 kaboom",c:1,l:2,p:115},
+{n:"1 bounce triple cody",l:2,p:90},{n:"double cody full out",l:2,p:85},{n:"standing 33 kaboom",l:2,p:95},{n:"triple kaboom full in",l:2,p:95},{n:"standing 123 kaboom",l:2,p:100},
+{n:"full in to double cody",c:1,l:2,p:90},{n:"triple kaboom to double cody",c:1,l:2,p:95},{n:"triple cody to 22 kaboom",c:1,l:2,p:105},{n:"standing triple backflip to double cody",c:1,l:2,p:105},{n:"double cody full to triple kaboom",c:1,l:2,p:110},{n:"standing triple kaboom to double cody",c:1,l:2,p:115},
+{n:"quad kaboom",l:3,p:150},{n:"triple cody to triple kaboom landed",c:1,l:3,p:160},{n:"full full to 23 kaboom",c:1,l:3,p:170},{n:"standing 123 kaboom landed",l:3,p:180},{n:"quad backflip",l:3,p:190},{n:"43 in backflips landed",l:3,p:200},{n:"44 kaboom",l:3,p:220},{n:"4123 cody",l:3,p:250}
+];
+const LN=["","Amateur","Intermediate","Pro"],LI=["","🟢","🟡","🔴"];
+const LV=["Kaikki","🟢 Amateur","🟡 Intermediate","🔴 Pro"],MD=["Yksi temppu","Combo"];
+let lv=0,md=0,cur=[],P=[],pid="",db=null,remote=null;
+try{P=JSON.parse(localStorage.getItem("tp_p")||"[]");pid=localStorage.getItem("tp_c")||""}catch(e){}
+const $=id=>document.getElementById(id);
+const me=()=>P.find(p=>p.id==pid);
+function save(){try{localStorage.setItem("tp_p",JSON.stringify(P));localStorage.setItem("tp_c",pid)}catch(e){}}
+function sync(p){if(db)db.doc("players/"+p.id).set({name:p.name,score:p.sc,pass:p.c[0],sketchy:p.c[1],fail:p.c[2],bestStreak:p.bst}).catch(()=>{})}
+function addPlayer(){const n=$("nm").value.trim().slice(0,20);if(!n)return;
+const p={id:"p"+Date.now().toString(36)+Math.random().toString(36).slice(2,6),name:n,sc:0,st:0,bst:0,c:[0,0,0]};
+P.push(p);pid=p.id;$("nm").value="";save();sync(p);cur=[];$("out").innerHTML='<div class="hint">Pelaaja luotu! Paina Arvo temppu.</div>';draw()}
+function chips(id,arr,get,set){const el=$(id);el.innerHTML="";arr.forEach((t,i)=>{const b=document.createElement("button");b.className="chip"+(get()==i?" on":"");b.textContent=t;b.onclick=()=>{set(i);draw()};el.appendChild(b)})}
+function lb(){
+const el=$("lb");el.innerHTML="";
+const mine=new Set(P.map(p=>p.id));
+let rows=remote||P.map(p=>({id:p.id,name:p.name,score:p.sc,pass:p.c[0],sketchy:p.c[1],fail:p.c[2]})).sort((x,y)=>y.score-x.score);
+$("lbn").textContent=remote?"Kaikkien pelaajien lista":"Vain tämän laitteen pelaajat";
+if(!rows.length){el.innerHTML='<div class="hint">Ei vielä pelaajia.</div>';return}
+rows.forEach((r,i)=>{const d=document.createElement("div");d.className="lr"+(mine.has(r.id)?" me":"")+(r.id==pid?" cur":"");
+const k=document.createElement("span");k.className="rk";k.textContent=["🥇","🥈","🥉"][i]||(i+1)+".";
+const n=document.createElement("span");n.className="nn";n.textContent=r.name;
+const sm=document.createElement("small");sm.textContent=" ✅"+(r.pass||0)+" 😬"+(r.sketchy||0)+" ❌"+(r.fail||0);n.appendChild(sm);
+const p=document.createElement("b");p.textContent=r.score+" p";
+d.append(k,n,p);el.appendChild(d)})}
+function draw(){
+chips("lv",LV,()=>lv,i=>lv=i);chips("md",MD,()=>md,i=>md=i);
+const pl=$("pl");pl.innerHTML="";
+P.forEach(p=>{const b=document.createElement("button");b.className="chip"+(p.id==pid?" on":"");b.textContent="👤 "+p.name;b.onclick=()=>{pid=p.id;save();draw()};pl.appendChild(b)});
+const m=me()||{sc:0,st:0,bst:0,c:[0,0,0]};
+$("sc").textContent=m.sc;$("st").textContent=m.st;$("bs").textContent=m.bst;
+$("cn").textContent="✅ "+m.c[0]+"  ·  😬 "+m.c[1]+"  ·  ❌ "+m.c[2];
+lb();dyDraw()}
+const dKey=()=>{const d=new Date();return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()};
+let dLv=1;
+function dTrick(lv){const d=new Date(),n=Math.floor(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/864e5),a=T.filter(t=>t.l==lv);return a[(n*7919+13+lv*31)%a.length]}
+function dyDraw(){const el=$("dy");el.innerHTML="";el.className="dy";const m=me(),k=dKey();
+const done=m&&m.dd&&m.dd.d==k?m.dd:null;if(done)dLv=done.l;
+const t=dTrick(dLv);
+const row=mk("div","row");[1,2,3].forEach(l=>{const lock=done&&done.l!=l;const b=mk("button","chip"+(dLv==l?" on":""),(lock?"🔒 ":LI[l]+" ")+LN[l]+(done&&done.l==l?" ✓":""));if(lock)b.disabled=true;b.onclick=()=>{dLv=l;dyDraw()};row.append(b)});el.append(row);
+const nb=t.p+(t.c?20:0),hb=Math.round(t.p/2),full=nb*3,half=hb*3;
+const tp=mk("div","top");tp.append(mk("span","step","⭐ PÄIVÄN TEMPPU · 3x XP"),mk("span",null,LI[t.l]+" "+LN[t.l]));
+const h=mk("h2");h.innerHTML=fmt(t.n);el.append(tp,h);
+const xp=mk("div","xp");xp.append(mk("div",null,"Normaali XP: Pass "+nb+" p · Sketchy "+hb+" p"),mk("div","x3","Päivän 3x XP: Pass "+full+" p · Sketchy "+half+" p"));el.append(xp);
+if(!m){el.append(mk("p","fct","Luo pelaaja, niin voit yrittää päivän temppua."));return}
+if(done){el.append(mk("p","fct",["✅ Pass","😬 Sketchy pass","❌ Fail"][done.r]+" · sait +"+done.p+" p (normaalisti "+[nb,hb,0][done.r]+" p). Voit valita uuden tason huomenna!"));return}
+el.append(mk("p","fct","Voit valita päivässä vain yhden tason. Valinta lukitsee muut tasot."));
+const th=mk("div","three");[["y","✅ Pass","+"+full],["s","😬 Sketchy pass","+"+half],["f","❌ Fail","+0"]].forEach(([c,x,v],i)=>{const bt=mk("button",c);bt.append(x,document.createElement("br"),mk("small",null,v));bt.onclick=()=>dRes(i,[full,half,0][i],t,dLv);th.append(bt)});el.append(th)}
+function dRes(i,pts,t,lv){const p=me();p.c[i]++;p.sc+=pts;p.st=i==2?0:p.st+1;if(p.st>p.bst)p.bst=p.st;if(i==2)addF(t.n);else if(i==0)delF(t.n);p.dd={d:dKey(),l:lv,r:i,p:pts};save();sync(p);draw()}
+function pool(){return T.filter(t=>(!lv||t.l==lv)&&(md?t.c:!t.c))}
+function spin(){
+if(!me()){$("out").innerHTML='<div class="hint">Luo ensin pelaaja kirjoittamalla nimi ylös ja painamalla Lisää pelaaja.</div>';$("nm").focus();return}
+const p=pool(),n=1;cur=[];
+for(let i=0;i<n;i++){let t;do{t=p[Math.floor(Math.random()*p.length)]}while(p.length>1&&cur.includes(t));cur.push(t)}
+show()}
+function show(){
+const base=cur.reduce((a,t)=>a+t.p,0),total=base+(md?20:0),half=Math.round(base/2);
+let h=cur.map((t,i)=>`<div class="card"><div class="top"><span class="step">${md?"COMBO":"TEMPPU"}</span><span>${LI[t.l]} ${LN[t.l]} · ${t.p} p</span></div><h2>${fmt(t.n)}</h2></div>`).join("");
+h+=`<div class="three"><button class="y" id="ps">✅ Pass<br><small>+${total}</small></button><button class="s" id="sk">😬 Sketchy pass<br><small>+${half}</small></button><button class="f" id="fl">❌ Fail<br><small>+0</small></button></div>`+(md?`<p class="safe">Combo-bonus +20 p, kun combo menee puhtaasti läpi (Pass).</p>`:"");
+$("out").innerHTML=h;
+const res=(i,pts,keep)=>{const p=me();p.c[i]++;cur.forEach(t=>{if(i==2)addF(t.n);else if(i==0)delF(t.n)});p.sc+=pts;p.st=keep?p.st+1:0;if(p.st>p.bst)p.bst=p.st;save();sync(p);draw();spin()};
+$("ps").onclick=()=>res(0,total,true);
+$("sk").onclick=()=>res(1,half,true);
+$("fl").onclick=()=>res(2,0,false)}
+let fc=null;
+function mk(t,c,x){const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+function fcStart(){const a=T.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}fc={q:a.slice(0,15),i:0,r:[0,0,0]};fcDraw()}
+function fcDraw(){const el=$("fcv");el.innerHTML="";const m=me();
+if(!fc){el.append(mk("p","fct","15 temppua putkeen. Tee ne yksi kerrallaan ja kirjaa tulos. Lopuksi näet, kuinka monta prosenttia sait tehtyä."));
+if(m&&m.fb!=null)el.append(mk("div","lbn","Paras tuloksesi: "+m.fb+" %"));
+const b=mk("button","big","Aloita Flip course");b.onclick=fcStart;el.append(b);return}
+if(fc.i>=15){const pc=Math.round((fc.r[0]+fc.r[1]*.5)/15*100);
+if(m&&pc>(m.fb||0)){m.fb=pc;save()}
+el.append(mk("div","fcp",pc+" %"),mk("div","lbn","✅ "+fc.r[0]+" Pass  ·  😬 "+fc.r[1]+" Sketchy  ·  ❌ "+fc.r[2]+" Fail"),mk("p","fct","Pass = 1, Sketchy pass = 0,5, Fail = 0."));
+if(m)el.append(mk("div","lbn","Paras tuloksesi: "+m.fb+" %"));
+const b=mk("button","big","Yritä uudestaan");b.onclick=fcStart;el.append(b);return}
+const t=fc.q[fc.i],bar=mk("div","bar"),f=mk("div");f.style.width=(fc.i/15*100)+"%";bar.append(f);
+el.append(mk("div","lbn","Temppu "+(fc.i+1)+" / 15"),bar);
+const c=mk("div","card"),tp=mk("div","top");tp.append(mk("span","step","FLIP COURSE"),mk("span",null,LI[t.l]+" "+LN[t.l]));const h2=mk("h2");h2.innerHTML=fmt(t.n);c.append(tp,h2);el.append(c);
+const th=mk("div","three");[["y","✅ Pass"],["s","😬 Sketchy pass"],["f","❌ Fail"]].forEach(([k,x],i)=>{const b=mk("button",k,x);b.onclick=()=>{fc.r[i]++;if(i==2)addF(t.n);else if(i==0)delF(t.n);fc.i++;fcDraw()};th.append(b)});el.append(th)}
+function fmt(n){return n.replace(/ to /g,' <span class="x">x</span> ')}
+function addF(n){const m=me();if(!m)return;m.f=m.f||[];const e=m.f.find(x=>x.n==n);if(e)e.k++;else m.f.push({n:n,k:1});save()}
+function delF(n){const m=me();if(!m||!m.f)return;m.f=m.f.filter(x=>x.n!=n);save()}
+function flDraw(){const el=$("flv");el.innerHTML="";const m=me();
+if(!m){el.append(mk("p","fct","Luo ensin pelaaja."));return}
+const f=m.f||[];
+el.append(mk("div","lbn",m.name+" · "+f.length+" temppua · järjestyksessä epäonnistumisen mukaan"));
+if(!f.length){el.append(mk("p","fct","Ei epäonnistuneita temppuja. 🎉"));return}
+f.forEach((e,i)=>{const t=T.find(x=>x.n==e.n),d=mk("div","lr");d.append(mk("span","rk",(i+1)+"."));const n=mk("span","nn");n.innerHTML=(t?LI[t.l]+" ":"")+fmt(e.n);n.append(mk("small",null," ×"+e.k));d.append(n);const x=mk("button","chip","✕");x.setAttribute("aria-label","Poista");x.onclick=()=>{delF(e.n);flDraw()};d.append(x);el.append(d)});
+const c=mk("button","chip","Tyhjennä lista");c.style.marginTop="6px";c.onclick=()=>{m.f=[];save();flDraw()};el.append(c)}
+function sheet(v){v=v===true?"l":v;$("mn").hidden=!!v;$("lbv").hidden=v!="l";$("fcv").hidden=v!="f";$("flv").hidden=v!="x";$("dy").hidden=v!="d";$("bk").hidden=!v;$("sht").textContent={l:"Leaderboard",f:"Flip course",x:"Epäonnistuneet",d:"Päivän temppu"}[v]||"Asetukset"}
+function openSh(){sheet(false);$("bd").classList.add("on");$("sh").classList.add("on")}
+function closeSh(){$("bd").classList.remove("on");$("sh").classList.remove("on")}
+$("gear").onclick=openSh;$("cl").onclick=closeSh;$("bd").onclick=closeSh;
+$("golb").onclick=()=>{sheet(true);lb()};$("gofc").onclick=()=>{fc=null;sheet("f");fcDraw()};$("gofl").onclick=()=>{sheet("x");flDraw()};$("gody").onclick=()=>{sheet("d");dyDraw()};$("bk").onclick=()=>sheet(false);
+$("spin").onclick=spin;
+$("addp").onclick=addPlayer;
+$("nm").onkeydown=e=>{if(e.key=="Enter")addPlayer()};
+(async()=>{try{if(!window.claude)return;db=await claude.use("db");if(!db)return;
+P.forEach(sync);
+db.collection("players").orderBy("score","desc").limit(20).onSnapshot(s=>{remote=s.docs.map(d=>({id:d.id,...d.data()}));lb()},()=>{remote=null;lb()})}catch(e){db=null}})();
+draw();
+</script>
+</body>
+</html>
